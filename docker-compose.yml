@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+    postgres:
+        container_name: PostgresContainer
+        ports:
+            - '5432:5432'
+        volumes:
+            - 'postgres_data:/data/go-mux-api-tut'
+        environment:
+            - POSTGRES_PASSWORD=skfP4ssw0rd
+            - POSTGRES_USER=skf
+        image: postgres
